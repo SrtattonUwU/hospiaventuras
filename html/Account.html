@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta de Usuario</title>
+    <link rel="stylesheet" href="../css/styleAccount.css">
+    <script>
+        function toggleEditForm() {
+            var form = document.getElementById('editForm');
+            form.style.display = form.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Hospiaventuras</h1>
+    <div class="account-container">
+        <h2>Cuenta de Usuario</h2>
+
+        <div class="account-info">
+            <p><strong>Nombre de usuario:</strong> <?php echo htmlspecialchars($user_data['username']); ?></p>
+            <p><strong>Correo electrónico:</strong> <?php echo htmlspecialchars($user_data['email']); ?></p>
+            <p><strong>Contraseña:</strong> <?php echo htmlspecialchars($user_data['password']); ?></p>
+        </div>
+
+        <button class="btn" onclick="toggleEditForm()">Editar Información</button>
+
+        <div id="editForm" style="display:none;">
+            <form action="../PHP/account.php" method="POST">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user_data['username']); ?>" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user_data['email']); ?>" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($user_data['password']); ?>" required>
+                
+                <button type="submit" class="btn">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

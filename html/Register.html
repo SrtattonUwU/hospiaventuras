@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospiaventura MUTM</title>
+    <link rel="stylesheet" href="../css/styleRegister.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="registerForm" action="../PHP/register.php" method="POST" onsubmit="return validateForm()">
+            <h1>Hospiaventuras</h1>
+            <h2>Sign up</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Repeat Password" required>
+            </div>
+            <button type="submit">Registrar</button>
+            <div class="register-link">
+                <p>¿Ya tienes una cuenta? <a href="Login.html">Iniciar sesión</a></p>
+            </div>
+        </form>        
+    </div>
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const repeatPassword = document.getElementById('repeatPassword').value;
+
+            if (password !== repeatPassword) {
+                alert('Las contraseñas no coinciden. Por favor, verifica.');
+                return false;
+            }
+            return true;
+        }
+
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        window.onload = function() {
+            if (getUrlParameter('error') === 'user_exists') {
+                alert('El nombre de usuario ya está registrado. Por favor, elige otro.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospiaventura MUTM</title>
+    <link rel="stylesheet" href="../css/styleLogin.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="loginForm" action="../PHP/login.php" method="POST">
+            <h1>HospiAventuras</h1>
+            <h2>Log in</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" placeholder="Username" id="username" name="username" required>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" placeholder="Password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#" onclick="window.location.href = 'Register.html'">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        window.onload = function() {
+            const error = getUrlParameter('error');
+            
+            if (error === 'user_not_found') {
+                alert('El nombre de usuario no existe. Por favor, verifica.');
+            } else if (error === 'incorrect_password') {
+                alert('La contraseña es incorrecta. Por favor, verifica.');
+            }
+        }
+    </script>
+</body>
+</html>

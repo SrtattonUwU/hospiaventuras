@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospiaventura MUTM</title>
+    <link rel="stylesheet" href="../css/styleReservations.css">
+</head>
+<body>
+
+<header>
+    <h1>Reservas</h1>
+</header>
+
+<div class="container-reservations">
+    <div class="reservation-item" data-id="1">
+        <h3>Reserva #1</h3>
+        <p><strong>Nombre Habitación: </strong>Robledo</p>
+        <p><strong>Cantidad de persona/s: </strong>2</p>
+        <p><strong>Tipo de Habitación: </strong>Deluxe</p>
+        
+        <form id="reservation-form" method="POST" action="../PHP/reservations.php">
+            <input type="hidden" name="habitacion" value="Deluxe">
+            <input type="hidden" name="usuario_id" value="<?php echo $_SESSION['user_id']; ?>">
+            
+            <div class="input-field">
+                <label for="start-date">Fecha de inicio:</label>
+                <input type="date" id="start-date" name="start-date" required>
+            </div>
+            
+            <div class="input-field">
+                <label for="days">Cantidad de días:</label>
+                <input type="number" id="days" name="days" min="1" required>
+            </div>
+            
+            <button type="submit" class="btn-modify">Reservar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

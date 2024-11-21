@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospiaventura MUTM</title>
+    <link rel="stylesheet" href="../css/stylesProducts.css" />
+    <style>
+      #payButton {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 15px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 8px;
+          width: 100%;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      #payButton:hover {
+          background-color: #45a049;
+          transform: scale(1.05);
+      }
+
+      #payButton:active {
+          background-color: #388e3c;
+          transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tienda</h1>
+      <div class="container-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
+        </div>
+
+        <div class="container-cart-products hidden-cart">
+          <div class="cart-product">
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito"></span>
+              <p class="titulo-producto-carrito"></p>
+              <span class="precio-producto-carrito"></span>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">$0.00</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container-items">
+      <div class="item" data-id="1">
+        <figure>
+          <img
+            src="../images/botellaAgua.png"
+            alt="producto"
+          />
+        </figure>
+        <div class="info-product">
+          <h2 class="titulo-producto">Botella Agua</h2>
+          <p class="price" data-price="1500">$1500 COP</p>
+
+          <div class="quantity-container">
+            <button class="btn-decrement">-</button>
+            <span class="product-quantity">1</span>
+            <button class="btn-increment">+</button>
+          </div>
+
+          <p class="total-price">$1500</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item" data-id="2">
+        <figure>
+          <img
+            src="../images/cocacola.jpeg"
+            alt="producto"
+          />
+        </figure>
+        <div class="info-product">
+          <h2 class="titulo-producto">Cocacola</h2>
+          <p class="price" data-price="4000">$4000</p>
+
+          <div class="quantity-container">
+            <button class="btn-decrement">-</button>
+            <span class="product-quantity">1</span>
+            <button class="btn-increment">+</button>
+          </div>
+
+          <p class="total-price">$4000</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item" data-id="3">
+        <figure>
+          <img
+            src="../images/papaLimon.jpg"
+            alt="producto"
+          />
+        </figure>
+        <div class="info-product">
+          <h2 class="titulo-producto">Papas Limon</h2>
+          <p class="price" data-price="2500">$2500</p>
+
+          <div class="quantity-container">
+            <button class="btn-decrement">-</button>
+            <span class="product-quantity">1</span>
+            <button class="btn-increment">+</button>
+          </div>
+
+          <p class="total-price">$2500</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item" data-id="4">
+        <figure>
+          <img
+            src="../images/papaTomate.jpg"
+            alt="producto"
+          />
+        </figure>
+        <div class="info-product">
+          <h2 class="titulo-producto">Papas Tomate</h2>
+          <p class="price" data-price="2700">$2700</p>
+
+          <div class="quantity-container">
+            <button class="btn-decrement">-</button>
+            <span class="product-quantity">1</span>
+            <button class="btn-increment">+</button>
+          </div>
+
+          <p class="total-price">$2700</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="item" data-id="5">
+        <figure>
+          <img
+            src="../images/pepsi.jpeg"
+            alt="producto"
+          />
+        </figure>
+        <div class="info-product">
+          <h2 class="titulo-producto">Pepsi</h2>
+          <p class="price" data-price="3800">$3800</p>
+
+          <div class="quantity-container">
+            <button class="btn-decrement">-</button>
+            <span class="product-quantity">1</span>
+            <button class="btn-increment">+</button>
+          </div>
+          <p class="total-price">$3800</p>
+          <button class="btn-add">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+    <form id="paymentForm" action="../PHP/products.php" method="POST">
+      <input type="hidden" name="total" id="total" value="">
+      <button type="submit" id="payButton">Pagar</button>
+    </form>
+    <script src="../JS/indexProducts.js">
+    </script>
+  </body>
+</html>

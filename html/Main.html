@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospiaventura MUTM</title>
+    <link rel="stylesheet" href="../css/styleMain.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="button-container">
+        <h1>Bienvenido, {{username}}</h1>
+        <p><strong>ID de Usuario:</strong> {{user_id}}</p>
+        <h2>Página principal</h2>
+        <button onclick="window.location.href = 'reservations.php'">Reservas</button>
+        <button onclick="window.location.href = 'products.php'">Productos</button>
+        <button onclick="window.location.href = 'account.php'">Cuenta</button>
+        <button onclick="window.location.href = 'about.php'">Acerca de</button>
+        <button onclick="window.location.href = 'logout.php'">Salir</button>
+    </div>
+</div>
+</body>
+</html>
