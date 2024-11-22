@@ -1,4 +1,4 @@
-# Sistema de Gestión para Hoteles
+# Sistema de Gestión para Hostales
 
 En el competitivo sector de la hostelería, la eficiencia en la gestión de reservas y la organización de información son factores clave para mantener un alto nivel de servicio. Este proyecto propone un sistema integral de gestión que optimiza los procesos internos de un hotel, mejorando la atención al cliente, reduciendo errores administrativos y modernizando la infraestructura tecnológica.
 
