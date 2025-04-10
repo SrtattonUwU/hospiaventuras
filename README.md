@@ -1,8 +1,8 @@
-# Sistema de Gestión para Hostales
+# Sistema de gestión para hostales
 
 En el competitivo sector de la hostelería, la eficiencia en la gestión de reservas y la organización de información son factores clave para mantener un alto nivel de servicio. Este proyecto propone un sistema integral de gestión que optimiza los procesos internos de un hotel, mejorando la atención al cliente, reduciendo errores administrativos y modernizando la infraestructura tecnológica.
 
-## 🚀 Objetivo del Proyecto
+## 🚀 Objetivo del proyecto
 
 Desarrollar un sistema que permita:
 
@@ -10,14 +10,14 @@ Desarrollar un sistema que permita:
 - **Recepcionistas:** Administrar reservas en tiempo real, simplificando la comunicación y reduciendo errores.
 - **Usuarios:** Realizar reservas de forma autónoma mediante una interfaz web accesible y fácil de usar.
 
-## 🎯 Beneficios Clave
+## 🎯 Beneficios clave
 
-- **Eficiencia Operativa:** Automatización de procesos internos.
-- **Mejora del Servicio al Cliente:** Atención más rápida y precisa.
-- **Reducción de Errores:** Eliminación de conflictos en las reservas.
-- **Modernización Tecnológica:** Infraestructura alineada con las demandas del mercado actual.
+- **Eficiencia operativa:** Automatización de procesos internos.
+- **Mejora del servicio al cliente:** Atención más rápida y precisa.
+- **Reducción de errores:** Eliminación de conflictos en las reservas.
+- **Modernización tecnológica:** Infraestructura alineada con las demandas del mercado actual.
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura del proyecto
 
 ```plaintext
 Proyecto/
