@@ -17,7 +17,7 @@ Desarrollar un sistema que permita:
 - **Reducción de errores:** Eliminación de conflictos en las reservas.
 - **Modernización tecnológica:** Infraestructura alineada con las demandas del mercado actual.
 
-## Estructura del proyecto Xd polla erecta
+## Estructura del proyecto
 
 ```plaintext
 Proyecto/
